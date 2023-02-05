@@ -3,20 +3,13 @@ import "./ProductListing.css";
 import ProductComponent from "./ProductComponent";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { setProducts } from "../redux/actions/productsAction";
+import { fetchProducts } from "../redux/actions/productsAction";
 
 const ProductListing = () => {
   const dispatch = useDispatch();
-  const fetchProducts = async () => {
-    const response = await axios
-      .get("https://fakestoreapi.com/products")
-      .catch((err) => {
-        console.log(err);
-      });
-    dispatch(setProducts(response.data));
-  };
+
   useEffect(() => {
-    fetchProducts();
+    dispatch(fetchProducts());
   }, []);
   return (
     <div className="container">

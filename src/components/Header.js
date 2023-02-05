@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header_container">
-        <h2>Ecommerce Shop </h2>
+        <h2>Active Shop </h2>
       </div>
     </div>
   );
