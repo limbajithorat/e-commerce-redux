@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/assignment-12-redux-limbajithorat
 # testing
 /coverage
 
